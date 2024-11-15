@@ -33,8 +33,6 @@ root.configure(bg="#F0F8FF")  # Cor de fundo suave
 style = ttk.Style()
 style.configure("TLabel", font=("Helvetica", 12), background="#F0F8FF")
 style.configure("TEntry", font=("Helvetica", 12), padding=5)
-style.configure("TButton", font=("Helvetica", 12, "bold"), foreground="#4CAF50", background="white", padding=10)
-style.map("TButton", background=[("active", "#45a049")])
 
 # Criando os rótulos e campos de entrada
 label_data1 = ttk.Label(root, text="Data 1 (YYYY-MM-DD):")
@@ -50,7 +48,7 @@ entry_data2 = ttk.Entry(root)
 entry_data2.pack(pady=5)
 
 # Criando o botão para calcular
-botao_calcular = ttk.Button(root, text="Calcular Diferença", command=calcular_diferenca)
+botao_calcular = tk.Button(root, text="Calcular Diferença", command=calcular_diferenca, font=("Helvetica", 12, "bold"), foreground="white", background="darkgreen")
 botao_calcular.pack(pady=15)
 
 # Variável para exibir o resultado
